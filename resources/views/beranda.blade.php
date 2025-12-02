@@ -45,7 +45,7 @@
                 <img src="{{ asset('img/logo.png') }}" alt="" class="w-19" srcset="">
                 <span class="font-bold text-2xl">SKILLBLOCK</span>
             </div>
-            <div class="lg:w-[29%] hidden md:flex lg:flex font-bold">
+            <div class=" hidden md:flex lg:flex font-bold">
                 <a class="hover:bg-blue-300 lg:px-4 lg:py-2 md:px-4 md:py-2 rounded-xl hover:text-white" href="#">Beranda</a> 
                 <a class="hover:bg-blue-300 lg:px-4 lg:py-2 md:px-4 md:py-2 rounded-xl hover:text-white" href="#">Tentang</a>
                 <a class="hover:bg-blue-300 lg:px-4 lg:py-2 md:px-4 md:py-2 rounded-xl hover:text-white" href="#">Tentang</a>

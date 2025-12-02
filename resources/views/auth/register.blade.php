@@ -7,18 +7,19 @@
             <h1 class="text-white font-bold text-3xl mt-4">Register</h1>
         </div>
         <div class="mt-10 flex flex-col h-75">
-            <form action="" method="post" class="flex flex-col gap-6">
+            <form action="{{ route('register.process') }}" method="post" class="flex flex-col gap-6">
+                @csrf
                 <div class="flex ml-2 items-center">
                     <label for="" class="text-white text-md">Nama:</label>
-                    <input type="text" name="" id="" class="bg-white ml-22 w-[68%] rounded h-7 outline-none pl-2">
+                    <input type="text" name="name" id="" class="bg-white ml-22 w-[68%] rounded h-7 outline-none pl-2">
                 </div>
                 <div class="flex ml-2 items-center">
                     <label for="" class="text-white text-md">Email:</label>
-                    <input type="text" name="" id="" class="bg-white ml-23 w-[68%] rounded h-7 outline-none pl-2">
+                    <input type="text" name="email" id="" class="bg-white ml-23 w-[68%] rounded h-7 outline-none pl-2">
                 </div>
                 <div class="flex ml-2 items-center relative">
                     <label for="" class="text-white text-md">Password:</label>
-                    <input type="password" name="" id="password" class="bg-white ml-16 w-[68%] rounded h-7 outline-none pl-2">
+                    <input type="password" name="password" id="password" class="bg-white ml-16 w-[68%] rounded h-7 outline-none pl-2">
                      <button 
                         id="togglePw" 
                         type="button"
@@ -29,7 +30,7 @@
                 </div>
                 <div class="flex ml-2 items-center relative">
                     <label for="" class="text-white text-md">Confirm Password:</label>
-                    <input type="password" name="" id="password" class="bg-white ml-1 w-[68%] rounded h-7 outline-none pl-2">
+                    <input type="password" name="confirm_password" id="password" class="bg-white ml-1 w-[68%] rounded h-7 outline-none pl-2">
                      <button 
                         id="togglePw"
                         type="button"
@@ -39,7 +40,7 @@
                     </button>
                 </div>
                 <div class="flex w-full justify-end px-2 items-center">
-                    <a href="/login" class="justify-self-end">Sudah Punya Akun?</a>
+                    <a href="{{ route('login') }}" class="justify-self-end">Sudah Punya Akun?</a>
                 </div>
                 <div class="w-full text-center">
                     <button type="submit" class="bg-white px-33 py-2  font-bold rounded-xl">Register</button>

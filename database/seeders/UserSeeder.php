@@ -2,41 +2,48 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
-        \App\Models\User::factory()->create([
-            'name' => 'Administrator',
-            'email' => 'admin@mail.com',
-            'password' => Hash::make('admin431'),
-            'tgl_lahir' => date('03-November-2023'),
+        // 1. Admin
+        User::create([
+            'name' => 'Administrator Utama',
+            'email' => 'admin@sekolah.com',
+            'email_verified_at' => now(), // Menandakan email sudah diverifikasi
+            'password' => Hash::make('password123'),
+            'tgl_lahir' => '1990-01-01',
             'role' => 'admin',
-            'kelas' => '-'
+            'kelas' => 'AD', 
+            'profil_pic' => 'default_admin.jpg',
         ]);
-        \App\Models\User::factory()->create([
-            'name' => 'Siswa',
-            'email' => 'siswa@mail.com',
-            'password' => Hash::make('siswa431'),
-            'tgl_lahir' => date('04-November-2023'),
+
+        // 2. Guru (Sesuai typo di schema: 'tearchers')
+        User::create([
+            'name' => 'Pak Budi Santoso',
+            'email' => 'guru@sekolah.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password123'),
+            'tgl_lahir' => '1985-05-20',
+            'role' => 'tearchers', 
+            'kelas' => 'GR',
+            'profil_pic' => 'default_guru.jpg',
+        ]);
+
+        // 3. Siswa
+        User::create([
+            'name' => 'Andi Pratama',
+            'email' => 'siswa@sekolah.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password123'),
+            'tgl_lahir' => '2006-08-17',
             'role' => 'students',
-            'kelas' => '3B'
-        ]);
-        \App\Models\User::factory()->create([
-            'name' => 'Guru',
-            'email' => 'guru@mail.com',
-            'password' => Hash::make('guru431'),
-            'tgl_lahir' => date('05-November-2023'),
-            'role' => 'teachers',
-            'kelas' => '-'
+            'kelas' => '1A',
+            'profil_pic' => 'default_siswa.jpg',
         ]);
     }
 }

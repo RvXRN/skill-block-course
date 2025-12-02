@@ -7,10 +7,11 @@
             <h1 class="text-white font-bold text-3xl mt-4">Login</h1>
         </div>
         <div class="mt-10 flex flex-col h-75 gap-7">
-            <form action="" method="post" class="flex flex-col  gap-8">
+            <form action="{{ route('login.process') }}" method="post" class="flex flex-col  gap-8">
+                @csrf
                 <div class="flex ml-2 items-center">
                     <label for="" class="text-white text-md">Nama/Email:</label>
-                    <input type="text" name="name" id="" class="bg-white ml-9 w-[70%] rounded h-7 outline-none pl-2">
+                    <input type="email" name="email" id="" class="bg-white ml-9 w-[70%] rounded h-7 outline-none pl-2">
                 </div>
                 <div class="flex ml-2 items-center relative">
                     <label for="" class="text-white text-md">Password:</label>

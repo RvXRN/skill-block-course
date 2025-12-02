@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements("user_id");
             $table->string('name');
             $table->string('email')->unique();
-            // $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->date('tgl_lahir');
             $table->enum('role',['students', 'tearchers', 'admin']);
