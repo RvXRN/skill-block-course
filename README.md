@@ -7,10 +7,10 @@ ini adalah sebuah kursus rancangan kami yang beranggotakan 4 orang
 - Fajar Hermawan 
 - Yusup Afifur Rohman
 ## Fitur 
-[x] Login Register
-[x] Add Course
-[x] Forum Discuss
-[x] Full Ui
+- Login Register ✗
+- Add Course ✗
+- Forum Discuss ✗
+- Full UI ✗
 ## Cara Install
 - clone github 
 ```
