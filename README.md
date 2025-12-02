@@ -14,12 +14,11 @@ ini adalah sebuah kursus rancangan kami yang beranggotakan 4 orang
 ## Cara Install
 - clone github 
 ```
-git clone https://github.com/RvXRN/skill-block-course && cd skill_block-course
+git clone https://github.com/RvXRN/skill-block-course && cd skill-block-course
 ```
 - install dependensi
 ```
-composer install
-npm install
+composer install && npm install
 ```
 - migrasi database 
 ```
