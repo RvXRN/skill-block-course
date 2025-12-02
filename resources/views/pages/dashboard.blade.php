@@ -1,4 +1,8 @@
 @extends('templates.template')
 @section('content')
- hahahah
+    <div class="flex">
+        <div class="flex">
+            
+        </div>
+    </div>
 @endsection 
