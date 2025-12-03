@@ -52,10 +52,4 @@ class User extends Authenticatable
             'tgl_lahir' => 'date', // Cast tanggal lahir
         ];
     }
-    public function courses()
-{
-    return $this->belongsToMany(Mapel::class, 'user_courses', 'user_id', 'subject_id')
-                ->withPivot('progress');
-}
-
 }
