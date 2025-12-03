@@ -56,26 +56,24 @@
 {{-- LIST MAPEL --}}
 <h2 class="text-xl font-semibold mb-3">Daftar Mapel</h2>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+@foreach($courses as $course)
+    <div class="p-4 bg-white shadow rounded-lg">
+        <h2 class="font-semibold text-lg mb-2">{{ $course->title }}</h2>
 
-    @foreach ($mapels as $mapel)
-    <div class="p-5 rounded-xl shadow text-white"
-         style="background-color: {{ $mapel->color }}">
-
-        <h3 class="text-lg font-semibold">{{ $mapel->name }}</h3>
-        
-
-        {{-- Progress Bar --}}
-        <div class="w-full bg-white/30 rounded-full h-2 mt-3">
-            <div class="bg-white h-2 rounded-full" style="width: {{ $mapel->progress }}%"></div>
+        <div class="w-full bg-gray-200 rounded-full h-3 mb-3">
+            <div class="bg-blue-500 h-3 rounded-full" 
+                style="width: {{ $course->pivot->progress }}%">
+            </div>
         </div>
+        <p class="text-sm text-gray-600 mb-3">{{ $course->pivot->progress }}% Selesai</p>
 
-        <button class="mt-4 w-full bg-white text-black py-2 rounded-lg text-sm font-medium">
-            Lanjutkan Belajar
-        </button>
-
+        <a href="{{ route('course.show', $course->subject_id) }}" 
+           class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm">
+            Lanjutkan Materi →
+        </a>
     </div>
-    @endforeach
-
+@endforeach
 </div>
+
 @endsection 

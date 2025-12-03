@@ -14,4 +14,11 @@ class Mapel extends Model
         'curiculum',
         'grade_range'
     ];
+
+    public function users()
+{
+    return $this->belongsToMany(User::class, 'user_courses', 'subject_id', 'user_id')
+                ->withPivot('progress');
+}
+
 }
