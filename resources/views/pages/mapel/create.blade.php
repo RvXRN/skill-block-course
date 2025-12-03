@@ -9,15 +9,16 @@
 
     <div>
         <label class="font-medium">Nama Mata Pelajaran</label>
-        <input name="name" required
+        <input name="subject_name" required
             class="w-full mt-1 px-3 py-2 border rounded focus:outline-blue-600">
     </div>
 
     <div>
-        <label class="font-medium">Deskripsi</label>
-        <textarea name="description" class="w-full mt-1 px-3 py-2 border rounded"></textarea>
+        <label class="font-medium">Kurikulum</label>
+        <input type="text" name="curiculum" class="w-full mt-1 px-3 py-2 border rounded focus:outline-blue-600">
     </div>
 
+    
     <div class="flex gap-2">
         <button class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white rounded">Simpan</button>
         <a href="{{ route('mapels.index') }}" class="px-5 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded">

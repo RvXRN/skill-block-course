@@ -20,14 +20,15 @@ class MapelController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'subject_name' => 'required|string|max:255'
+            'subject_name' => 'required|string|max:255',
+                
         ]);
 
         Mapel::create([
             'subject_name' => $request->subject_name
         ]);
 
-        return redirect()->route('mapel.index')->with('success', 'Mapel berhasil ditambahkan');
+        return redirect()->route('mapels.index')->with('success', 'Mapel berhasil ditambahkan');
     }
 
     public function edit($id)

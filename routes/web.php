@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\{Auth, Route};
-use App\Http\Controllers\{AuthController, HomeController, MapelController};
+use App\Http\Controllers\{AuthController, MapelController, UserController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,6 @@ use App\Http\Controllers\{AuthController, HomeController, MapelController};
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
 // Route::get('/login', [HomeController::class, 'login']);
 // Route::get('/register', [HomeController::class, 'reg']);
 // Route::get('/dashboard', [HomeController::class, 'dashboard']);

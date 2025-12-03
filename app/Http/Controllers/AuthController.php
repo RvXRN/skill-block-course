@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\{Auth, Hash, Storage};
+use App\Models\User;
 
 class AuthController extends Controller
 {
+     public function index(){
+        // $user = User::where('role','!=','admin')->count();
+
+        return view('beranda');
+    }
     // Tampilkan Form Register
     public function showRegister()
     {

@@ -31,5 +31,9 @@ public function dashboard()
 
     ]);
 }
+<<<<<<< Updated upstream
 
 }
+=======
+}   
+>>>>>>> Stashed changes
