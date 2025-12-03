@@ -31,6 +31,8 @@ Route::middleware('guest')->group(function () {
 // Authenticated Routes (Hanya bisa diakses jika sudah login)
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/profile', [UserController::class, 'index'])->name('profile.index');
+    Route::post('/profile/update', [UserController::class, 'update'])->name('profile.update');
     
     // Contoh Dashboard Sederhana
     Route::get('/dashboard', function () {
