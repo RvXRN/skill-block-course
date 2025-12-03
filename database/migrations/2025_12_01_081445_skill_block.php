@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         //
-           Schema::create('skill_block', function (Blueprint $table){
+           Schema::create('skill_blocks', function (Blueprint $table){
             $table->bigIncrements('block_id');
             $table->string('title');
-            $table->string('level');
+            $table->enum('level', ['begineer', 'intermediate', 'expert']);
             $table->unsignedBigInteger('subject_id');
-            $table->foreign('subject_id')->references('subject_id')->on('mapel');
+            $table->foreign('subject_id')->references('subject_id')->on('mapels')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -27,5 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('skill_block');
     }
 };

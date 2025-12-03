@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'tgl_lahir' => '1990-01-01',
             'role' => 'admin',
             'kelas' => 'AD', 
-            'profil_pic' => 'default_admin.jpg',
+            'profil_pic' => 'logon.png',
         ]);
 
         // 2. Guru (Sesuai typo di schema: 'tearchers')
@@ -29,9 +29,9 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => Hash::make('password123'),
             'tgl_lahir' => '1985-05-20',
-            'role' => 'tearchers', 
+            'role' => 'teachers', 
             'kelas' => 'GR',
-            'profil_pic' => 'default_guru.jpg',
+            'profil_pic' => 'logon.png',
         ]);
 
         // 3. Siswa
@@ -43,7 +43,7 @@ class UserSeeder extends Seeder
             'tgl_lahir' => '2006-08-17',
             'role' => 'students',
             'kelas' => '1A',
-            'profil_pic' => 'default_siswa.jpg',
+            'profil_pic' => 'logon.png',
         ]);
     }
 }

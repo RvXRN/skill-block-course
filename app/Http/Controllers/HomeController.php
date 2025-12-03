@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     //
     public function index(){
-        $user = User::where('role','!=','admin')->count();
+        // $user = User::where('role','!=','admin')->count();
 
         return view('beranda');
     }

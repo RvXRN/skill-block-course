@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('mapel', function (Blueprint $table){
+        Schema::create('mapels', function (Blueprint $table){
             $table->bigIncrements('subject_id');
             $table->string('subject_name');
             $table->string('curiculum', 12);
             $table->integer('grade_range');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('assesment', function (Blueprint $table){
+        Schema::create('assesments', function (Blueprint $table){
             $table->bigIncrements('assesment_id');
             $table->string('title', 32);
             $table->string('type', 12);
             $table->integer('max_score');
-            $table->char('time_limit', 2);
+            $table->integer('time_limit');
             $table->integer('attempts_allowed');
             $table->integer('nilai');
             $table->timestamps();
@@ -30,6 +30,6 @@ return new class extends Migration
     public function down(): void
     {
         //
-        Schema::dropIfExists('assesment');
+        Schema::dropIfExists('assesments');
     }
 };

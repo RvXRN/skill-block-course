@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Mapel extends Model
 {
     use HasFactory;
-    protected $table = "mapel";
     protected $primary_key = "subject_id";
     protected $fillable =[
         'subject_name',

@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('enrollment', function (Blueprint $table){
+        Schema::create('enrollments', function (Blueprint $table){
             $table->bigIncrements('enrollment_id');
             $table->date('enrollment_date');
             $table->date('completion_date');
             $table->boolean('status');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
-            $table->foreign('subject_id')->references('subject_id')->on('mapel');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('subject_id')->references('subject_id')->on('mapels')->onDelete('cascade');
         });
     }
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('content');
             $table->string('description')->nullable();
             $table->unsignedBigInteger('courses_mapel');
-            $table->foreign('courses_mapel')->references('subject_id')->on('mapel');
+            $table->foreign('courses_mapel')->references('subject_id')->on('mapels')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->date('tgl_lahir');
-            $table->enum('role',['students', 'tearchers', 'admin']);
+            $table->enum('role',['students', 'teachers', 'admin'])->default('students');
             $table->string('kelas', 2);
             $table->string('profil_pic');
             $table->rememberToken();
